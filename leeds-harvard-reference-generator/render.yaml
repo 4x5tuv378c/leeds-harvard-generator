@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: leeds-harvard-backend
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: node server.js
+    rootDir: backend
+    envVars:
+      - key: GOOGLE_BOOKS_KEY
+        value: your_google_books_api_key
+      - key: CROSSREF_KEY
+        value: your_crossref_api_key
+      # Add all required keys from .env.example here
